@@ -1,3 +1,5 @@
+# End-to-End Trojan Removal in Monet Mixture-of-Experts LLMs
+
 ## Abstract
 
 Neural network Trojans (backdoor attacks) pose a severe security threat to large language models (LLMs). In this work, we focus on [Monet](https://arxiv.org/abs/2412.04139) – a Mixture-of-Experts (MoE) based LLM – and develop an end-to-end framework for detecting and removing trojans. We first construct a synthetic trojan attack on Monet by fine-tuning it with a hidden trigger in the input that causes malicious outputs. Next, we introduce advanced detection techniques that leverage Monet’s sparse expert architecture: gating analysis to pinpoint which expert is activated by the trigger, and activation correlation methods to distinguish trojan-induced neural activations. Building on these insights, we propose mitigation strategies including expert ablation (disabling or retraining the compromised expert) and activation steering using forward hooks to neutralize the trojan behavior at runtime. Experiments on trojaned Monet models show mixed results, with some approaches proving ineffective, and other eliminating >95% of malicious behavior with minimal impact on perplexity.
